@@ -1,0 +1,23 @@
+body{ 
+    
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-prop{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input{
+    color: gray;
+}
