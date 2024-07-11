@@ -13,11 +13,15 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
               <h2 class="card-title">Consulta de Tipo de Cambio</h2>
+              <p class="card-text">Seleccione la fecha</p>
                 <form action="/consulta" method="post" class="form">
                     <label for="fecha"> Selecione la fecha </label>
                     <input type="date" class="fecha" id="fecha" name="fecha" required>
                     <button type="submit" class="btn btn-success" id="consultButton">Consultar</button>
                 </form>
+                <div class="consulta">
+                    <p class="text_fallida">No se pudo obtener el tipo de cambio para la fecha selecionada</p>
+                </div>
             </div>
           </div>
     </div>

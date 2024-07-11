@@ -8,7 +8,7 @@ class DataAccess:
         self.correo = "klinarte258@gmail.com"
         self.subnivel = "N"
 
-    def obtener_obtener_cambio(self, fecha, codigo_indicador) -> str:
+    def obtener_cambio(self, fecha, codigo_indicador) -> str:
         try:
             # Realizar la solicitud
             url = f'https://gee.bccr.fi.cr/Indicadores/Suscripciones/WS/wsindicadoreseconomicos.asmx/ObtenerIndicadoresEconomicos'
@@ -45,3 +45,4 @@ class DataAccess:
         except Exception as e:
             print(f'Error colectando la info: {e}')
             return "Error"
+    

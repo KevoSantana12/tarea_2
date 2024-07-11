@@ -5,5 +5,5 @@ def create_app():
     app = Flask(__name__)
 
     with app.app_context():
-        from . import route
+        from . import routes
         return app

@@ -18,6 +18,13 @@
                     <input type="date" class="fecha" id="fecha" name="fecha" required>
                     <button type="submit" class="btn btn-success" id="consultButton">Consultar</button>
                 </form>
+                <div class="consulta">
+                    <h2 class="h1_titulo">Tipo de de cambio para <span>{{ cambio.fecha }}</span></h2>
+                    <div class="cambio">
+                        <p>Compra: {{ cambio.valor_compra }}</p>
+                        <p>Venta: {{ cambio.valor_venta }}</p>
+                    </div>
+                </div>
             </div>
           </div>
     </div>

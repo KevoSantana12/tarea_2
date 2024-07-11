@@ -1,16 +1,25 @@
-from typing import Self
 from Acceso_Datos import DataAccess
 from Entities import Cambio_dto
 
 class BusinessLogic:
     def __init__(self) -> None:
-        Self.data_access = DataAccess()
+        self.data_access = DataAccess()
 
-    def cambio_venta(self,fecha) -> str:
-        cambio_dto = Cambio_dto(fecha=fecha)
-        return self.data_access.obtener_obtener_cambio(cambio_dto.fecha, cambio_dto.codigo_venta)
+    def cambio_formato_fechas(self, fecha) -> str:
+        partes_fecha = fecha.split('-')
+        fecha = f"{partes_fecha[2]}/{partes_fecha[1]}/{partes_fecha[0]}"
+        return fecha
 
-    def cambio_compra(self,fecha) -> str:
-        cambio_dto = Cambio_dto(fecha=fecha)
-        return self.data_access.obtener_obtener_cambio(cambio_dto.fecha, cambio_dto.codigo_compra)
+    def cambio_venta(self, fecha) -> str:
+        try:
+            return self.data_access.obtener_cambio(fecha, 318)
+        except Exception as e:
+            print(f'Error en cambio_venta: {e}')
+            return "Error en cambio_venta"
 
+    def cambio_compra(self, fecha) -> str:
+        try:
+            return self.data_access.obtener_cambio(fecha, 317)
+        except Exception as e:
+            print(f'Error en cambio_compra: {e}')
+            return "Error en cambio_compra"
