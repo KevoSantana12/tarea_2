@@ -1,5 +1,4 @@
 from Acceso_Datos import DataAccess
-from Entities import Cambio_dto
 
 class BusinessLogic:
     def __init__(self) -> None:
